@@ -24,3 +24,8 @@ dependencies {
 application {
     mainClass = 'me.onils.genmodlibjar.Main'
 }
+
+jar {
+    exclude("me/onils/genmodlibjar/**")
+    exclude("**/mappings")
+}
