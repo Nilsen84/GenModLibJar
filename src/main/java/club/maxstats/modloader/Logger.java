@@ -1,4 +1,4 @@
-package club.maxstats.modloader.util;
+package club.maxstats.modloader;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -11,7 +11,7 @@ public class Logger {
         log(String.format("[INFO] %s", log));
     }
 
-    public static void error(String log, Exception ex) {
+    public static void error(String log, Throwable ex) {
         if (ex != null) {
             StringWriter exception = new StringWriter();
             ex.printStackTrace(new PrintWriter(exception));
@@ -23,7 +23,7 @@ public class Logger {
 
     public static void error(String log) { log(String.format("[ERROR] %s", log)); }
 
-    public static void severe(String log, Exception ex) {
+    public static void severe(String log, Throwable ex) {
         if (ex != null) {
             StringWriter exception = new StringWriter();
             ex.printStackTrace(new PrintWriter(exception));

@@ -1,4 +1,4 @@
-package club.maxstats.modloader.listener.event;
+package club.maxstats.modloader;
 
 public class MovePlayerEvent extends Event {
     private double x, y, z;

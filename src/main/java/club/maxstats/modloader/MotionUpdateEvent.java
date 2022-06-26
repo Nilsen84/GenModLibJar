@@ -1,6 +1,4 @@
-package club.maxstats.modloader.listener.event;
-
-import club.maxstats.modloader.ModLoaderMain;
+package club.maxstats.modloader;
 
 public class MotionUpdateEvent extends Event {
     private double x, y, z;

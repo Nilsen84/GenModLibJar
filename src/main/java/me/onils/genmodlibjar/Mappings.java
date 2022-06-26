@@ -27,7 +27,7 @@ class MappedClass {
 public class Mappings {
     private final Map<String, MappedClass> classMap = new HashMap<>();
 
-    public MappedClass getMappedClass(String notchName){
+    public MappedClass getMappedClass(String notchName) {
         return classMap.get(notchName);
     }
 

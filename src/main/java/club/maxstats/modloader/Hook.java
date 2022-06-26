@@ -1,4 +1,4 @@
-package club.maxstats.modloader.injection.hook;
+package club.maxstats.modloader;
 
 import org.objectweb.asm.tree.ClassNode;
 

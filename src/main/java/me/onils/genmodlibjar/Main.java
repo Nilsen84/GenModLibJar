@@ -56,8 +56,42 @@ public class Main {
             if (!entry.getName().endsWith(".class"))
                 continue;
 
+            /* When obfuscated, all classes are put into "club.maxstats.modloader" package */
+//            String obfuscatedName = "club/maxstats/modloader/" + entry.getName().substring(entry.getName().lastIndexOf("/") + 1, entry.getName().indexOf(".")) + ".class";
+
             File newClassFile = new File(outputDir, entry.getName());
             FileUtils.writeByteArrayToFile(newClassFile, modLoaderJar.getInputStream(entry).readAllBytes());
         }
     }
+
+//    @SneakyThrows(IOException.class)
+//    public static void main(String[] args) {
+//        JarFile mcJar = new JarFile(Utils.getMinecraftJar());
+//        Enumeration<? extends JarEntry> entries = mcJar.entries();
+//
+//        File outFile = new File(System.getProperty("user.dir"), "out.txt");
+//        FileWriter writer = new FileWriter(outFile);
+//
+//        while (entries.hasMoreElements()) {
+//            JarEntry entry = entries.nextElement();
+//            if (!entry.getName().endsWith(".class"))
+//                continue;
+//
+//            InputStream entryStream = mcJar.getInputStream(entry);
+//
+//            ClassReader classReader = new ClassReader(entryStream.readAllBytes());
+//            ClassNode cn = new ClassNode();
+//            classReader.accept(cn, 0);
+//
+//            String mcpName = Mappings.getMappedClassName(cn.name);
+//            String mcpSuperName = Mappings.getMappedClassName(cn.superName);
+//
+//            if (cn.superName.startsWith("java/lang"))
+//                continue;
+//
+//            writer.write(String.format("SC: %s %s\n", mcpName, mcpSuperName));
+//        }
+//
+//        writer.close();
+//    }
 }

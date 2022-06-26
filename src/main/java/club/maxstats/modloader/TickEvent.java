@@ -1,4 +1,4 @@
-package club.maxstats.modloader.listener.event;
+package club.maxstats.modloader;
 
 public class TickEvent extends Event {
     public static class RenderTick {

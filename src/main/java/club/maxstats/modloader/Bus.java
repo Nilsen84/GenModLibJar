@@ -1,4 +1,4 @@
-package club.maxstats.modloader.listener;
+package club.maxstats.modloader;
 
 public class Bus {
     public void subscribe(Object object){}

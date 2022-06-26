@@ -1,4 +1,4 @@
-package club.maxstats.modloader.util;
+package club.maxstats.modloader;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
